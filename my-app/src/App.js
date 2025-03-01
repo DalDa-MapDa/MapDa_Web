@@ -4,6 +4,7 @@ import ServiceTerm from './screen/term/ServiceTerm';
 import PrivacyTerm from './screen/term/PrivacyTerm';
 import LocationTerm from './screen/term/LocationTerm';
 import HomePage from './screen/home/HomeScreen';
+import PromotionPage from './screen/promotion/promotion_page';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/term/service" element={<ServiceTerm />} />
         <Route path="/term/privacy" element={<PrivacyTerm />} />
         <Route path="/term/location" element={<LocationTerm />} />
+        <Route path="/promotion" element={<PromotionPage />} />
       </Routes>
     </Router>
   );
