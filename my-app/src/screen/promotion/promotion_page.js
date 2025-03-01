@@ -46,8 +46,10 @@ const PromotionPage = () => {
 
     if (isIOS) {
       redirectUrl = "https://apps.apple.com/kr/app/%EB%A7%B5%EB%8B%A4-map-da/id6503710373";
+      window.close();
     } else if (isAndroid) {
       redirectUrl = "https://play.google.com/store/apps/details?id=com.dalda.mapda&hl=ko";
+      window.close();
     } else {
       console.error('해당하는 OS가 없습니다. 브라우저를 닫습니다.');
       // OS가 해당되지 않으면 API 요청 없이 브라우저 종료 처리 (실제 종료는 주석 처리)
