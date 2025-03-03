@@ -1,0 +1,140 @@
+/* Gradient.css */
+.global_margin {
+  margin-top: 100px;
+  margin-bottom: 0px;
+  /* 기본값: 1080px ~ 1439px */
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+/* 모바일 (최대 480px) */
+@media (max-width: 480px) {
+  .global_margin {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* 태블릿 (481px ~ 1079px) */
+@media (min-width: 481px) and (max-width: 1079px) {
+  .global_margin {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+/* 1440px 이상 */
+@media (min-width: 1440px) {
+  .global_margin {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+/* promotion_landing.css */
+.speech-bubble {
+  position: relative;
+  display: inline-block; /* 텍스트 길이에 따라 크기가 가변적 */
+  background: #ffffff; /* 말풍선 내부 흰색 */
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 3.58px 11.34px rgba(76, 10, 10, 0.21);
+  max-width: 80%; /* 내용이 길어질 경우 최대 너비 지정 */
+  
+  /* 말풍선 내부 폰트 설정 */
+  font-family: 'Mark Pro', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #79322F;
+}
+
+/* 말풍선 꼬리 (arrow) */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* 말풍선 아래쪽에 꼬리 위치 */
+  left: 38px; /* 꼬리의 위치 조정 */
+  border-width: 0 0 10px 10px; /* 직각 삼각형 모양으로 변경 */
+  border-style: solid;
+  border-color: transparent transparent transparent #ffffff; /* 왼쪽 변만 흰색으로 */
+  transform: rotate(0deg); /* 45도 회전하여 말풍선 꼬리 모양 만들기 */
+  transform-origin: 0 0; /* 회전 기준점을 왼쪽 상단으로 */
+}
+
+
+.gradient {
+  background: linear-gradient(135deg, 
+    #FFD6A58F 0%,
+    #FFB08ADB 25%,
+    #FFA07EFF 50%,
+    #FF7962FF 75%,
+    #FF7760FF 100%);
+}
+
+
+.mapda_title{
+  margin-top: 24px;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+  
+}
+
+.mapda_title_h1{
+  padding-left: 21px;
+  font-family: '양진체', sans-serif;
+  font-size: 60px;
+  color: #FF5C5C;
+  margin-bottom: 20px;
+}
+
+.mapda_title_small_area{
+  margin-left: 20px;
+  white-space: nowrap;
+  align-items: baseline;
+  display: flex;
+}
+
+/* promotion_landing.css */
+.mapda_title_small_box {
+  position: relative;
+  display: inline-block; /* 텍스트 길이에 따라 크기가 가변적 */
+  background: #FF5C5C; /* 말풍선 내부 흰색 */
+  padding: 1px;
+
+  padding-bottom: 14px;
+  box-shadow: 0 3.58px 11.34px rgba(76, 10, 10, 0.21);
+  max-width: 80%; /* 내용이 길어질 경우 최대 너비 지정 */
+  
+  /* 말풍선 내부 폰트 설정 */
+  font-family: '양진체', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #FFFFFF;
+}
+
+.mapda_title_small_text{
+  padding-left: px;
+  font-family: '양진체', sans-serif;
+  font-size: 32px;
+  color: #FF5C5C;
+  margin-bottom: 20px;
+}
+
+#circle {
+  width : 8px;
+  height : 8px;
+  border-radius: 50%;
+  background-color: #A3403E;
+}
+
+
+@font-face {
+  font-family: '양진체';
+  src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

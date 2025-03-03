@@ -5,6 +5,7 @@ import PrivacyTerm from './screen/term/PrivacyTerm';
 import LocationTerm from './screen/term/LocationTerm';
 import HomePage from './screen/home/HomeScreen';
 import PromotionPage from './screen/promotion/promotion_page';
+import PromotionLanding from './screen/promotion/promotion_landing';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/term/privacy" element={<PrivacyTerm />} />
         <Route path="/term/location" element={<LocationTerm />} />
         <Route path="/promotion" element={<PromotionPage />} />
+        <Route path="/promotion/landing" element={<PromotionLanding />} />
       </Routes>
     </Router>
   );
