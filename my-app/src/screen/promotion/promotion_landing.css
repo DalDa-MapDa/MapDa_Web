@@ -1,36 +1,13 @@
 /* Global Margin */
 .global_margin {
   max-width: 1440px;
-  margin: 100px auto 0;  /* 상단 100px, 좌우 자동(중앙 정렬), 하단 0 */
+  margin: 100px auto 0;  /* 상단 100px, 좌우 중앙 정렬 */
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* 모바일 (최대 480px) */
-@media (max-width: 480px) {
-  .global_margin {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-/* 태블릿 (481px ~ 1079px) */
-@media (min-width: 481px) and (max-width: 1079px) {
-  .global_margin {
-    margin-left: 60px;
-    margin-right: 60px;
-  }
-}
-
-/* 1440px 이상 */
-@media (min-width: 1440px) {
-  .global_margin {
-    margin: 100px auto 0; /* 1440px 이상에서는 좌우 자동으로 */
-  }
-}
-
-
-/* Speech Bubble */
+/* 기본 스타일 (1440px 이상) */
+/* 스피치 버블 */
 .speech-bubble {
   position: relative;
   display: inline-block;
@@ -39,14 +16,12 @@
   border-radius: 8px;
   box-shadow: 0 3.58px 11.34px rgba(76, 10, 10, 0.21);
   max-width: 80%;
-  
   font-family: 'Mark Pro', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #79322F;
 }
 
-/* Speech Bubble Arrow */
 .speech-bubble::after {
   content: "";
   position: absolute;
@@ -80,6 +55,11 @@
   align-items: center;
 }
 
+/* MapDa Icon (추가된 클래스) */
+.mapda_icon {
+  width: 71px;
+}
+
 .mapda_title_h1 {
   padding-left: 21px;
   font-family: '양진체', sans-serif;
@@ -95,7 +75,6 @@
   align-items: baseline;
 }
 
-/* MapDa Small Box 1 */
 .mapda_title_small_box1 {
   position: relative;
   display: inline-block;
@@ -109,7 +88,6 @@
   color: #FFFFFF;
 }
 
-/* MapDa Small Box 2 */
 .mapda_title_small_box2 {
   position: relative;
   display: inline-block;
@@ -123,7 +101,6 @@
   color: #FFFFFF;
 }
 
-/* MapDa Small Text */
 .mapda_title_small_text {
   padding-left: 0;
   font-family: '양진체', sans-serif;
@@ -135,7 +112,16 @@
 /* Store Area */
 .store_area {
   margin-top: 20px;
-  height: 40px;
+  height: 40px;  /* 기본 높이 */
+  display: flex;
+  align-items: center;
+  gap: 20px;  /* 아이템 간 간격 20px */
+}
+
+/* Store Area 아이콘 */
+.store_area img.store_icon {
+  width: 100%;
+  max-width: 120px;
 }
 
 /* Center Area: 원 배경과 Phone Image */
@@ -191,7 +177,6 @@
   height: 770px;
 }
 
-/* 팀 비전 텍스트 영역 (앞쪽) */
 .team_vision_title_area {
   position: relative;
   z-index: 2;
@@ -216,7 +201,6 @@
   text-align: center;
 }
 
-/* 팀 비전 원 영역 (뒤쪽) */
 .team_vision_circle_area {
   position: absolute;
   top: 0;
@@ -241,21 +225,21 @@
   height: 500px;
   border-radius: 50%;
   top: 20%;
-  right: -35%;
+  right: -50%;
 }
 
-.footer_area{
+.footer_area {
   margin-bottom: 50px;
   text-align: center;
 }
 
-.footer_text_area{
+.footer_text_area {
   margin: 20px;
   text-align: center;
 }
 
-.footer_text{
-  font-family:  sans-serif;
+.footer_text {
+  font-family: sans-serif;
   margin-left: 20px;
   margin-right: 20px;
   font-weight: 400;
@@ -277,4 +261,177 @@
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+/* 모바일 (최대 480px) */
+@media (max-width: 480px) {
+  .global_margin {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .speech-bubble {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  
+  /* MapDa 타이틀 및 아이콘 */
+  .mapda_icon {
+    width: 50px;
+  }
+  
+  .mapda_title_h1 {
+    font-size: 28px;  /* 줄어든 폰트 크기 */
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .mapda_title_small_box1,
+  .mapda_title_small_box2 {
+    font-size: 16px;  /* 줄어든 폰트 크기 */
+    padding: 0 5px 10px 3px;
+  }
+  
+  .mapda_title_small_text {
+    font-size: 16px;  /* 줄어든 폰트 크기 */
+    margin-bottom: 8px;
+  }
+  
+  .mapda_title_small_area {
+    margin-left: 10px;
+  }
+  
+  /* Store Area 높이 조절 (width는 그대로) */
+  .store_area {
+    height: 35px;
+  }
+  
+  .center_area {
+    height: 400px;
+    margin-bottom: -50px;
+  }
+  
+  .center_circle_background {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .phone_image {
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .team_vision_area {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .team_vision_title {
+    font-size: 18px;
+  }
+  
+  .team_vision_member {
+    font-size: 14px;
+  }
+  
+  /* 팀 비전 하단 원 SVG 비율 수정 */
+  .team_vision_ciecle1 {
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 10%;
+  }
+  
+  .team_vision_ciecle2 {
+    width: 250px;
+    height: 250px;
+    top: 20%;
+    right: -30%;
+  }
+}
+
+/* 태블릿 (481px ~ 1079px) */
+@media (min-width: 481px) and (max-width: 1079px) {
+  .global_margin {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  
+  .speech-bubble {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+  
+  .mapda_icon {
+    width: 60px;
+  }
+  
+  .mapda_title_h1 {
+    font-size: 48px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .mapda_title_small_box1,
+  .mapda_title_small_box2 {
+    font-size: 28px;
+    padding: 0 7px 12px 4px;
+  }
+  
+  .mapda_title_small_text {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .store_area {
+    height: 40px;
+  }
+  
+  .center_area {
+    height: 500px;
+    margin-bottom: -75px;
+  }
+  
+  .center_circle_background {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .phone_image {
+    width: 400px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .team_vision_area {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .team_vision_title {
+    font-size: 24px;
+  }
+  
+  .team_vision_member {
+    font-size: 18px;
+  }
+  
+  .team_vision_ciecle1 {
+    width: 150px;
+    height: 150px;
+    top: 0;
+    right: 10%;
+  }
+  
+  .team_vision_ciecle2 {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    right: -40%;
+  }
 }

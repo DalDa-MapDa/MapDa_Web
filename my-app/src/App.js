@@ -16,7 +16,7 @@ function App() {
         <Route path="/term/privacy" element={<PrivacyTerm />} />
         <Route path="/term/location" element={<LocationTerm />} />
         <Route path="/promotion" element={<PromotionPage />} />
-        <Route path="/promotion/landing" element={<PromotionLanding />} />
+        {/* <Route path="/promotion/landing" element={<PromotionLanding />} /> */}
       </Routes>
     </Router>
   );

@@ -7,7 +7,6 @@ import AppStore from './images/appstore.svg';
 import PhoneImage from './images/Phone.png';
 import Circle1 from './images/circle1.svg';
 
-
 const PromotionLanding = () => {
   return (
     <>
@@ -28,7 +27,7 @@ const PromotionLanding = () => {
             앗! 위험 구간입니다 주의하세요!
           </div>
           <div className="mapda_title">
-            <img src={MapDa_Icon} alt="Map Da" style={{ width: '71px' }} />
+            <img src={MapDa_Icon} alt="Map Da" className="mapda_icon" />
             <div className="mapda_title_h1">
               맵다
             </div>
@@ -39,7 +38,6 @@ const PromotionLanding = () => {
                   Map
                 </div>
               </div>
-
               <div className="mapda_title_small_text">
                 으로 모두
               </div>
@@ -53,10 +51,10 @@ const PromotionLanding = () => {
           </div>
           <div className="store_area">
             <a href="https://play.google.com/store/apps/details?id=com.dalda.mapda">
-              <img src={GooglePlay} alt="GooglePlay" style={{ marginRight: '10Px' }}></img>
+              <img src={GooglePlay} alt="GooglePlay" className="store_icon" />
             </a>
             <a href="https://apps.apple.com/kr/app/%EB%A7%B5%EB%8B%A4-map-da/id6503710373">
-              <img src={AppStore} alt="Apple AppStore"></img>
+              <img src={AppStore} alt="Apple AppStore" className="store_icon" />
             </a>
           </div>
           <div className="center_area">
@@ -76,18 +74,18 @@ const PromotionLanding = () => {
               </p>
             </div>
             <div className="team_vision_circle_area">
-              <img src={Circle1} alt="Circle1" className="team_vision_ciecle1"></img>
-              <img src={Circle1} alt="Circle1" className="team_vision_ciecle2"></img>
+              <img src={Circle1} alt="Circle1" className="team_vision_ciecle1" />
+              <img src={Circle1} alt="Circle1" className="team_vision_ciecle2" />
             </div>
           </div>
         </div>
         <footer>
           <div className="footer_area">
-          <div className="footer_text_area">
-             <a className="footer_text" href="https://www.mapda.site/term/service">서비스 이용약관</a>
-             <a className="footer_text" href="https://www.mapda.site/term/privacy">개인정보처리방침</a>
-             </div>
-            <p className="footer_text">Copyright © Team Dal:Da All Rights Reseved</p>
+            <div className="footer_text_area">
+              <a className="footer_text" href="https://www.mapda.site/term/service">서비스 이용약관</a>
+              <a className="footer_text" href="https://www.mapda.site/term/privacy">개인정보처리방침</a>
+            </div>
+            <p className="footer_text">Copyright © Team Dal:Da All Rights Reserved</p>
           </div>
         </footer>
       </body>
